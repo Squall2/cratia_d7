@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import "partials/utility/sizes";
+@import "partials/utility/colors";
+@import "partials/utility/mixin";
+
+body {
+  color: $color;
+  background-color: $background-color;
+  font-size: $rem;
+  line-height: $lh;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+a {
+  border: none;
+  color: $link-color;
+  &::before, &, &::after {
+    transition-property: color, background-color, border-color, box-shadow, opacity;
+    transition-duration: .2s;
+  }
+  img {
+    border: none;
+    outline: none;
+  }
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    outline: none;
+    color: $link-hover-color;
+  }
+  &.js {
+    text-decoration: none;
+    border-bottom-width: $thin;
+    border-bottom-style: dashed;
+  }
+}
+
+.to-left { @include to-left; }
+
+.to-right { @include to-right; }
+
+.element-invisible { @extend %element-invisible; }
+
+.resetTypografy { @extend %resetTypografy; }
+
+.clearfix { @include clearfix; }
+
+.clear { @extend %clear; }

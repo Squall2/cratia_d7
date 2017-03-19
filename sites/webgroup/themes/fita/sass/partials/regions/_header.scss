@@ -1,0 +1,13 @@
+.l-branding {
+  @include to-left();
+  margin: 0;
+  font: inherit;
+  a { text-decoration: none; }
+  .site-logo img {
+    width: em(image-width('../logo.png'));
+    display: block;
+  }
+}
+.l-header{
+  @extend %clearfix;
+}

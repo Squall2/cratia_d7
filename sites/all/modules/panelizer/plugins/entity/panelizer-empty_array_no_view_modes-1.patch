@@ -1,0 +1,25 @@
+From d54d1d56be4f20ff46b801f6383e42cb676d712a Mon Sep 17 00:00:00 2001
+From: Ron Shimshock <ron@shimshockgroup.com>
+Date: Sat, 30 Jul 2016 19:14:06 -0500
+Subject: [PATCH] Return empty array when no view modes
+
+---
+ plugins/entity/PanelizerEntityDefault.class.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/entity/PanelizerEntityDefault.class.php b/plugins/entity/PanelizerEntityDefault.class.php
+index 805be86..1db3124 100644
+--- a/plugins/entity/PanelizerEntityDefault.class.php
++++ b/plugins/entity/PanelizerEntityDefault.class.php
+@@ -754,7 +754,7 @@ abstract class PanelizerEntityDefault implements PanelizerEntityInterface {
+       }
+     }
+ 
+-    return $this->enabled_view_modes[$bundle];
++    return isset($this->enabled_view_modes[$bundle]) ? $this->enabled_view_modes[$bundle] : array();
+   }
+ 
+   /**
+-- 
+2.9.2
+

@@ -1,0 +1,17 @@
+$mini-width:  979px !default;
+$micro-width: 480px !default;
+$wide-width: 1230px !default;
+
+@mixin breakpoint($point) {
+  @if $point == desk {
+    @media (min-width: $mini-width + 1) { @content; }
+  } @else if $point == mini {
+    @media (max-width: $mini-width) { @content; }
+  } @else if $point == mini-only {
+    @media (max-width: $mini-width) AND (min-width: $micro-width+1) { @content; }
+  } @else if $point == micro {
+    @media (max-width: $micro-width) { @content; }
+  } @else if $point == wide {
+    @media (min-width: $wide-width + 1) { @content; }
+  }
+}

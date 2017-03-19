@@ -1,0 +1,648 @@
+/*******************************************************************************
+ * style.scss
+ *
+ * This file shouldn't directly contain any SCSS code, instead it only serves to
+ * combine the SCSS contained in other Sass partials through @import directives.
+ *
+ * BASE............Styling for common HTML and Drupal elements.
+ * LAYOUT..........Styles for the page structure that contain components.
+ * COMPONENTS......Components, their modifiers and sub-components.
+ ******************************************************************************/
+/* Grays*/
+/* Colors*/
+/* Links*/
+.customfile-input {
+  clip: rect(0, 0, 0, 0);
+  position: absolute !important;
+}
+
+.l-header:after, .l-header:before {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+
+.customfile-feedback-populated:before, .customfile .btn:before, .form-submit[name$=upload_button]:before, .form-submit[name$=remove_button]:before, .ajax-progress .throbber:before, .tabledrag-handle .handle:before, .filter-help a:after {
+  font-family: 'WebHostingHub-Glyphs';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.customfile-feedback-populated:before, .customfile .btn:before, .form-submit[name$=upload_button]:before, .form-submit[name$=remove_button]:before, .ajax-progress .throbber:before, .tabledrag-handle .handle:before, .filter-help a:after {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-size: 120%;
+  line-height: .5;
+  vertical-align: middle;
+  background-image: none;
+  margin: 0 0.35714em 0.35714em 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*******************************************************************************
+<<<<<<< HEAD
+ * _base.scss
+ *
+ * Base styles define the default look for HTML and common Drupal elements.
+ *
+ * These rules will generally be made up of element selectors for HTML elements
+ * such as headings, paragraphs and lists. Common Drupal elements such as form
+ * items, collapsible fieldsets and messages should be included in this partial.
+ *
+ * The styleguide module (http://drupal.org/project/styleguide) gives you a good
+ * overview of Drupal's common elements for styling. By setting a solid baseline
+=======
+ * _base.scss 
+
+ * Base styles define the default look for HTML and common Drupal elements. 
+ *
+ * These rules will generally be made up of element selectors for HTML elements
+ * such as headings, paragraphs and lists. Common Drupal elements such as form
+ * items, collapsible fieldsets and messages should be included in this partial.
+ *
+ * The styleguide module (http://drupal.org/project/styleguide) gives you a good
+ * overview of Drupals common elements for styling. By setting a solid baseline
+>>>>>>> sandbox/7.x-4.x
+ * before adding any more specific customisations you ensure that as any new
+ * features are added they will be correctly styled without any extra work.
+ ******************************************************************************/
+.node {
+  margin: 0 0 1.5em;
+}
+
+.node__links, .comment__links {
+  margin: 0;
+  text-align: left;
+  /* LTR */
+}
+
+/*.picture, .comment .submitted {
+  float: right; */
+/* LTR */
+                         /*
+clear: right; */
+/* LTR */
+                         /*
+padding-left: 1em; */
+/* LTR */
+                                /*
+}*/
+/*.new {
+  color: #ffae00;
+  font-size: .92em;
+  font-weight: bold;
+  float: right; */
+/* LTR */
+                           /*
+}*/
+/*
+
+.preview .node, .preview .comment, .sticky {
+  margin: 0;
+  padding: .5em 0;
+  border: 0;
+}
+
+.sticky {
+  padding: 1em;
+  background-color: $white;
+  border: $thin solid #e0e5fb;
+  margin-bottom: 2em;
+}
+*/
+#comments {
+  position: relative;
+}
+
+#comments h2.comments {
+  padding: 0.57143em 0;
+}
+
+.comment {
+  padding: 1.5em 0;
+}
+
+.indented {
+  margin-left: 25px;
+  /* LTR */
+}
+
+.comment h3 a.active {
+  color: #494949;
+}
+
+.menu a, .menu .nolink {
+  cursor: pointer;
+  display: block;
+}
+
+#autocomplete li {
+  cursor: default;
+  padding: 0.21429em;
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+  background: transparent;
+}
+
+.table tr:first-child {
+  border-top: none;
+}
+
+.table tr {
+  border-top: 0.07143em solid #c7c7c7;
+}
+
+.table thead {
+  border-bottom: 0.21429em solid #c7c7c7;
+}
+
+.table th, .table td {
+  padding: 0.57143em;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  font-weight: bold;
+  background: transparent;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table tr.odd td {
+  background-color: #F5F5F5;
+}
+
+.table tr.even td {
+  background-color: white;
+}
+
+form input[type=text], form .form-text, form select, form textarea {
+  border: 0.07143em solid #c7c7c7;
+  box-shadow: 0 0 0.92857em rgba(246, 168, 40, 0), inset 0 0.07143em 0.35714em #c7c7c7;
+  transition-duration: .2s;
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  background-color: white;
+  color: #222222;
+  padding: 0.35714em;
+}
+form input[type=text][disabled], form .form-text[disabled], form select[disabled], form textarea[disabled] {
+  background-color: #c7c7c7;
+}
+form input[type=text][readonly], form .form-text[readonly], form select[readonly], form textarea[readonly] {
+  background-color: #e3e3e3;
+}
+form input[type=text]:focus, form .form-text:focus, form select:focus, form textarea:focus {
+  border-color: #f6a828;
+  box-shadow: 0 0 0.5em #f6a828, inset 0 0.07143em 0.5em #c7c7c7;
+}
+form input[type=checkbox], form input[type=radio] {
+  border: none;
+  padding: 0;
+}
+form input, form select {
+  border-radius: 0.35714em;
+}
+form textarea {
+  border-radius: 0.35714em 0.35714em 0 0;
+}
+form input.error, form textarea.error {
+  border: 0.07143em solid #ae2b2b;
+  color: #222222;
+}
+form fieldset {
+  background: white;
+  margin: 1em 0;
+  color: #222222;
+  border: 0.07143em solid #c7c7c7;
+  border-radius: 0.35714em;
+  padding: 1em;
+}
+form fieldset.vertical-tabs-pane {
+  border: none;
+  padding: 0 1em;
+}
+form fieldset.filter-wrapper {
+  border-radius: 0 0 0.35714em 0.35714em;
+}
+form fieldset legend {
+  color: #4e4e4e;
+  font-weight: 600;
+  padding: 0 1em;
+}
+form fieldset.collapsed {
+  border-radius: 0;
+  padding-top: 0;
+  border-color: #c7c7c7 transparent transparent;
+}
+form legend {
+  font-family: "PT Sans Narrow", sans-serif;
+  background: white;
+  padding: 0.57143em;
+  border: 0.07143em solid #c7c7c7;
+  border-radius: 0.35714em;
+}
+form .vertical-tabs {
+  background: white;
+}
+form .description {
+  color: #4e4e4e;
+}
+form .form-required {
+  color: #f6a828;
+}
+
+html.js fieldset.collapsed {
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: 0.57143em;
+}
+
+html.js fieldset.collapsible .fieldset-legend {
+  padding-left: 2em;
+  /* LTR */
+  background: url("data:image/gif;base64,R0lGODlhCgAKAMQUAM/Q0vT09Ojr7s7Q0dLU1f7+/u/z9+Dj5tfX1+Dg4MrKyufq7tfZ27m5uba2tsLCwvv7+7W1tbS0tP////P3+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABQALAAAAAAKAAoAAAU0ICWOZGkCkaRKEUAtTzHNU/Es1JDQUzKIggZkBmkIRgTEDEEgGRyBgMNQYigUDBPlcCCFAAA7") no-repeat 0 50%;
+  /* LTR */
+}
+
+html.js fieldset.collapsed .fieldset-legend {
+  background: url("data:image/gif;base64,R0lGODlhCgAKAMQWALm5ucLCwvv7+/H1+NLU1c7Q0dbW1uHk58nJyba2ttjb3c3P0OHh4dfZ2/T09Obq7eLi4vPz88zO0Ofq7rS0tP////P3+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABYALAAAAAAKAAoAAAUtoCVOYlkWwUKaFlUxADGYbiUYiVLWVRUhBxGv4gAKe7dEY1eBxGangOTBGlVDADs=") no-repeat 0 50%;
+  /* LTR */
+}
+
+.inputUI-wrap {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0.07143em 0.35714em 0.35714em 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inputUI-processed, .ui-checkbox, .ui-radio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+}
+
+.inputUI-processed {
+  opacity: 0;
+  z-index: 1;
+}
+
+.ui-checkbox, .ui-radio {
+  z-index: 0;
+}
+
+.ui-checkbox, .ui-radio {
+  border: 0.07143em solid #c7c7c7;
+  box-shadow: 0 0 0.92857em rgba(246, 168, 40, 0), inset 0 0.07143em 0.35714em #c7c7c7;
+  transition-duration: .2s;
+  transition-property: color, background-color, border-color, box-shadow, transform;
+  background-color: white;
+  color: #222222;
+  padding: 0.35714em;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ui-checkbox[disabled], .ui-radio[disabled] {
+  background-color: #c7c7c7;
+}
+.ui-checkbox[readonly], .ui-radio[readonly] {
+  background-color: #e3e3e3;
+}
+.ui-checkbox::before, .ui-radio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 0.07143em solid transparent;
+  background-color: rgba(0, 128, 1, 0);
+  background-clip: content-box;
+}
+
+.inputUI-processed:checked + .ui-checkbox::before, .inputUI-processed:checked + .ui-radio::before {
+  background-color: #008001;
+}
+
+.inputUI-processed:focus + .ui-checkbox, .inputUI-processed:focus + .ui-radio {
+  border-color: #f6a828;
+  box-shadow: 0 0 0.5em #f6a828, inset 0 0.07143em 0.5em #c7c7c7;
+}
+
+.inputUI-processed:active + .ui-checkbox, .inputUI-processed:active + .ui-radio {
+  background-color: #c7c7c7;
+}
+
+.inputUI-processed[disabled] + .ui-checkbox, .inputUI-processed[disabled] + .ui-radio {
+  background-color: #c7c7c7;
+}
+.inputUI-processed[disabled] + .ui-checkbox::before, .inputUI-processed[disabled] + .ui-radio::before {
+  opacity: .5;
+}
+
+.ui-radio, .ui-radio::before {
+  border-radius: 50%;
+}
+
+html.js input.form-autocomplete {
+  background-position: 100% 5px;
+}
+
+html.js input.throbbing {
+  background-position: 100% -15px;
+}
+
+.file-icon {
+  vertical-align: middle;
+}
+
+.form-item, .form-actions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ui-spinner-input {
+  box-shadow: none !important;
+}
+
+.btn {
+  background-color: #F5F5F5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #b3b3b3;
+  border-image: none;
+  border-radius: 0.35714em;
+  border-style: solid;
+  border-width: 0.07143em;
+  box-shadow: 0 0.07143em 0 rgba(255, 255, 255, 0.2) inset, 0 0.07143em 0.21429em rgba(0, 0, 0, 0.05);
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.15;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.35714em 1em;
+  text-align: center;
+  text-shadow: 0 0.07143em 0.07143em rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+}
+.btn:hover, .btn:focus {
+  background-position: 0 -1.28571em;
+  color: #333333;
+  text-decoration: none;
+  transition: background-position .3s linear 0s;
+  background-color: #E6E6E6;
+}
+.btn:active {
+  background-image: none;
+  box-shadow: 0 0.21429em 0.42857em rgba(0, 0, 0, 0.15) inset, 0 0.07143em 0.21429em rgba(0, 0, 0, 0.05);
+  outline: 0 none;
+}
+
+img, media {
+  max-width: 100%;
+  height: auto;
+}
+
+.customfile {
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  position: relative;
+}
+
+.customfile-disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.customfile-feedback {
+  border: 0.07143em solid #cccccc;
+  color: #808080;
+  display: inline-block;
+  line-height: 1.15;
+  padding: 0.35714em 1em;
+  font-size: 1em;
+  border-radius: 0.3333333em 0 0 0.3333333em;
+  box-shadow: inset 0 0.07143em 0.25em rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  margin-right: -0.5em !important;
+  max-width: 15em;
+}
+
+.customfile-feedback:after {
+  content: '\00a0';
+}
+
+.customfile-feedback-populated {
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.customfile-feedback-populated:before {
+  content: "\f0d6";
+  color: #222222;
+}
+
+/*file type icons*/
+.customfile-ext-jpg:before, .customfile-ext-gif:before, .customfile-ext-png:before, .customfile-ext-jpeg:before, .customfile-ext-bmp:before {
+  content: "\f09f";
+}
+
+.customfile-ext-mp3:before, .customfile-ext-mp4:before, .customfile-ext-mov:before, .customfile-ext-swf:before, .customfile-ext-wav:before, .customfile-ext-m4v:before {
+  content: "\f17d";
+}
+
+.customfile-ext-zip:before, .customfile-ext-tar:before, .customfile-ext-sit:before {
+  content: "\f171";
+}
+
+.customfile .btn:before {
+  content: "\f095";
+}
+
+.form-submit[name$=upload_button]:before {
+  content: "\f11b";
+}
+
+.form-submit[name$=remove_button]:before {
+  content: "\f0c7";
+}
+
+.form-submit[name$=upload_button].progress-disabled:before, .form-submit[name$=remove_button].progress-disabled:before {
+  content: "\f339";
+  animation: rotate 0.5s infinite linear;
+  width: 1em;
+}
+.form-submit[name$=upload_button] + .ajax-progress, .form-submit[name$=remove_button] + .ajax-progress {
+  display: none;
+}
+
+/*******************************************************************************
+ * _components.scss
+ *
+ * Imports more partials that contain full components (modules in SMACSS), their
+ * sub-components and modifiers.
+ *
+ * Components are discrete parts of your page that should sit within the regions
+ * of your layouts. You should try to abstract your components as much as
+ * possible to promote reuse throughout the theme. Components should be flexible
+ * enough to respond to any width and should never rely on context
+ * (e.g. .sidebar-first .component) for styling. This allows modules to be
+ * placed throughout the theme with no risk of them breaking.
+ *
+ * If you find you need to change the look of a component depending on it's
+ * context you should avoid using context based classes at all costs. Instead it
+ * is better to add another "modifier" class to the component to alter the
+ * styling. Again, this promotes reuse.
+ *
+ * Sub-components are the individual parts that make up a component. As a
+ * general rule, adding a class to target a sub-component is a much better
+ * option than using descendant selectors or element selectors. In many cases
+ * sub-components can be made more reusable by making them components in their
+ * own right, so they can then be used within other components.
+ *
+ * Almost everything that doesn't belong in base should be made a component.
+ * Here's some common examples throughout Drupal:
+ *
+ * - Blocks
+ * - Content Types - For example, you may have a generic node component that
+ *      contains sub-components for the submitted by line and links. Specific
+ *      components can then be created for each content type to style the
+ *      specifics of each. Finally, by using entity view modes you can easily
+ *      apply modifications based on the .node-[view-mode] classes.
+ * - Forms - For instance the log in form.
+ * - Views - Each views output style could be made into a component, the content
+ *       of each row should be provided my a view mode styled by it's component
+ *       CSS. Exposed filter forms, views pagers and other views elements are
+ *       also good candidates for components.
+ ******************************************************************************/
+.breadcrumb {
+  padding: 0;
+  margin-top: 0;
+}
+.breadcrumb li {
+  display: inline;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: " / ";
+}
+
+#tabs-wrapper {
+  position: relative;
+}
+
+.tabs--primary, .tabs--primary li, .tabs--secondary, .tabs--secondary li {
+  border: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs--primary {
+  padding: 0;
+  font-size: 90%;
+}
+
+.tabs--secondary {
+  clear: both;
+  text-align: left;
+  /* LTR */
+}
+
+.tabs--primary a, .tabs--secondary a {
+  border: 0;
+  background: transparent;
+  padding: 0.21429em 0.57143em;
+  margin: 0 0 0 0.07143em;
+  /* LTR */
+  height: auto;
+  text-decoration: none;
+  position: relative;
+  top: -0.07143em;
+  display: inline-block;
+}
+
+.tabs--primary .active a, .tabs--primary a:hover, .tabs--secondary .active a, .tabs--secondary a:hover {
+  background: #A6CEE7;
+  color: white;
+}
+
+.ajax-progress .throbber {
+  background: none;
+  width: auto;
+  height: auto;
+}
+.ajax-progress .throbber:before {
+  content: "\f339";
+  color: #1c94c4;
+  animation: rotate 0.5s infinite linear;
+}
+
+.tabledrag-handle .handle {
+  background: none;
+  width: auto;
+  height: auto;
+}
+.tabledrag-handle .handle:before {
+  content: "\f322";
+  color: #777777;
+}
+
+.tabledrag-handle-hover .handle:before {
+  color: #333333;
+  text-shadow: 0 0 0.07143em white;
+}
+
+.filter-help a {
+  background: none;
+  padding-right: 0;
+}
+.filter-help a:after {
+  content: "\f0a3";
+  margin: 0 0 0.35714em 0.35714em;
+  color: #dddddd;
+}
+
+.l-branding {
+  float: left;
+  margin-right: 0.57143em;
+  margin: 0;
+  font: inherit;
+}
+.l-branding a {
+  text-decoration: none;
+}
+.l-branding .site-logo img {
+  width: 5.57143em;
+  display: block;
+}
