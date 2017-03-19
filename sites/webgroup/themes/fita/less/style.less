@@ -2385,3 +2385,115 @@ P{
     }
   }
 }
+.site-map-main-menu{
+  margin-bottom: 30px;
+  .menu{
+    li{
+      list-style: none;
+      margin-bottom: 5px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 10px;
+      &:first-child{
+        padding-left: 0;
+      }
+      a{
+        font-size: 16px;
+        .font-regular;
+        color: #212121;
+        line-height: 1.2;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 7px 10px 7px 7px;
+        .t-d(.3s);
+        &:before{
+          content: '•';
+          color: #00a4b8;
+          margin-right: 10px;
+          .t-d(.3s);
+        }
+        &:hover{
+          background-color: #00a4b8;
+          color: @color-white;
+          .t-d(.3s);
+          &:before{
+            color: @color-white;
+            .t-d(.3s);
+          }
+        }
+      }
+    }
+  }
+}
+.site-map-country-links{
+  .view-country{
+    .views-view-grid{
+      margin: 0;
+      tr{
+        td{
+          width: 50%;
+          .views-field-name-field,.views-field-view{
+            .field-content{
+              margin-bottom: 5px;
+              a{
+                font-size: 16px;
+                .font-regular;
+                color: #212121;
+                line-height: 1.2;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                display: inline-block;
+                padding: 7px 10px 7px 20px;
+                position: relative;
+                .t-d(.3s);
+                &:before{
+                  content: '•';
+                  color: #00a4b8;
+                  margin-right: 10px;
+                  display: block;
+                  position: absolute;
+                  left: 4px;
+                  top: 7px;
+                  .t-d(.3s);
+                }
+                &:hover{
+                  background-color: #00a4b8;
+                  color: @color-white;
+                  .t-d(.3s);
+                  &:before{
+                    color: @color-white;
+                    .t-d(.3s);
+                  }
+                }
+              }
+            }
+          }
+          .views-field-view{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            .field-content{
+              a{
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: 959px) {
+        tr{
+          td{
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
