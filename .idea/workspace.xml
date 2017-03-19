@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/webgroup/settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9758">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.9387755" vertical-offset="2448" max-vertical-offset="8908">
               <folding />
             </state>
           </provider>
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/webgroup/themes/fita/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2349" column="24" selection-start="53014" selection-end="53014" vertical-scroll-proportion="0.64721143" vertical-offset="1711" max-vertical-offset="2567">
+            <state line="2349" column="24" selection-start="53014" selection-end="53014" vertical-scroll-proportion="-4.940594" vertical-offset="1711" max-vertical-offset="2567">
               <folding>
                 <element signature="e#273#325#0" expanded="false" />
                 <element signature="e#337#389#0" expanded="false" />
@@ -5833,13 +5833,6 @@
         <state line="14" column="27" selection-start="449" selection-end="449" vertical-scroll-proportion="0.27293578" vertical-offset="0" max-vertical-offset="872" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/webgroup/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9758">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/webgroup/themes/fita/js/jquery-ui.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="274329">
@@ -5870,7 +5863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/webgroup/themes/fita/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2349" column="24" selection-start="53014" selection-end="53014" vertical-scroll-proportion="0.64721143" vertical-offset="1711" max-vertical-offset="2567">
+        <state line="2349" column="24" selection-start="53014" selection-end="53014" vertical-scroll-proportion="-4.940594" vertical-offset="1711" max-vertical-offset="2567">
           <folding>
             <element signature="e#273#325#0" expanded="false" />
             <element signature="e#337#389#0" expanded="false" />
@@ -6454,6 +6447,13 @@
             <element signature="e#53584#53629#0" expanded="false" />
             <element signature="e#53597#53625#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/webgroup/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.9387755" vertical-offset="2448" max-vertical-offset="8908">
+          <folding />
         </state>
       </provider>
     </entry>
