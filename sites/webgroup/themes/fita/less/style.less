@@ -1612,6 +1612,92 @@ P{
           }
         }
       }
+      @media (max-width: 639px){
+        >.views-row{
+          width: 100%!important;
+          float: none;
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+          .t-d(.3s);
+          &:hover{
+            cursor: pointer;
+            .t-d(.2s);
+            >.views-field-name{
+              opacity: 1;
+              &:after{
+                -webkit-transform: rotate(0);
+                -moz-transform: rotate(0);
+                -ms-transform: rotate(0);
+                -o-transform: rotate(0);
+                transform: rotate(0);
+              }
+            }
+            .views-field-view{
+              display: block;
+            }
+          }
+          >.views-field-name{
+            height: 70px;
+            &.active{
+              opacity: .9;
+              &:after{
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+                .t-d(.3s);
+              }
+            }
+          }
+          >.views-field-name.active + .views-field-view{
+            opacity: 1;
+            height: auto;
+            padding: 15px 10px;
+            border: 1px solid #c8c7c7;
+            .t-d(.3s);
+          }
+          .views-field-view{
+            position: relative;
+            width: 100%;
+            top: 0;
+            left: 0;
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+            display: block;
+            box-shadow: none;
+            opacity: 0;
+            height: 0;
+            margin: 0;
+            padding: 0 10px;
+            border: 0;
+            overflow: hidden;
+            .t-d(.3s);
+            .view-category{
+              .view-content{
+                .views-view-grid{
+                  width: 100%;
+                  tr{
+                    td{
+                      width: 50%;
+                    }
+                  }
+                  .field-content{
+                    a{
+                      font-size: 18px;
+                      margin-bottom: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     @media (max-width: 639px){
       .view-header{
