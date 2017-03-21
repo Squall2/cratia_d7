@@ -39,8 +39,8 @@
 
     function BlockHeaderInsert(){
         if($(window).width() < 640){
-            if(!$('.header .pane-page-logo').prev().hasClass('.pane-locale-language')){
-                $('.pane-locale-language').insertBefore('.header .pane-page-logo');
+            if(!$('.header .pane-bean-logo').prev().hasClass('.pane-locale-language')){
+                $('.pane-locale-language').insertBefore('.header .pane-bean-logo');
             }
             if($('.header .wrap-menu-block .pane-bean-kontakty').length){
                 $('.header .pane-bean-kontakty').insertBefore('.header .wrap-menu-block');
@@ -127,7 +127,6 @@
 
       if($('.view-country').length){
           var this_page = document.location.href;
-          console.log(this_page);
           $('.view-country .views-row').each(function(){
               if(this_page == $(this).find('.views-field-name a').attr('href')){
                   $(this).addClass('active');
