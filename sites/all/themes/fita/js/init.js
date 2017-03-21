@@ -101,7 +101,16 @@
           obj.find('a').text(newText);
       });
       BlockHeaderInsert();
-      CountryTitleClick();
+     // CountryTitleClick();
+
+      $('.view-country .views-field-nothing').on('click', function(){
+          var width = $(window).width();
+          if(width < 640) {
+              var obj = $(this);
+              obj.toggleClass('visible');
+              return false;
+          }
+      });
 
       if($('html').attr('lang') == 'ru'){
           $('.pane-search-form .search-block-form input[name="search_block_form"]').attr('placeholder','Поиск');
@@ -177,7 +186,7 @@
   });
     $(window).resize(function(){
         BlockHeaderInsert();
-        CountryTitleClick();
+        //CountryTitleClick();
        // menuDrag();
     });
 })(jQuery, Drupal);

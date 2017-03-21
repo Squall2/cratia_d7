@@ -45,7 +45,7 @@
       <file leaf-file-name="init.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/fita/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="76" selection-start="4276" selection-end="4276" vertical-scroll-proportion="0.34628975" vertical-offset="947" max-vertical-offset="3196">
+            <state line="105" column="69" selection-start="5441" selection-end="5441" vertical-scroll-proportion="0.5383707" vertical-offset="1329" max-vertical-offset="3349">
               <folding />
             </state>
           </provider>
@@ -258,7 +258,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cratia-d7" />
     <property name="options.lastSelected" value="lessc" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -1067,7 +1067,9 @@
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547" />
+        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image (1).svg">
@@ -1077,7 +1079,9 @@
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547" />
+        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image (1).svg">
@@ -1762,7 +1766,9 @@
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547" />
+        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image (1).svg">
@@ -7842,7 +7848,9 @@
     </entry>
     <entry file="file://G:/project/cratia/design/PSD/1366/method-draw-image.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="-0.80093133" vertical-offset="688" max-vertical-offset="1547" />
+        <state line="0" column="5" selection-start="5" selection-end="29" vertical-scroll-proportion="-0.80093133" vertical-offset="688" max-vertical-offset="1547">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/search/search.module">
@@ -7892,7 +7900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/fita/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="76" selection-start="4276" selection-end="4276" vertical-scroll-proportion="0.34628975" vertical-offset="947" max-vertical-offset="3196">
+        <state line="105" column="69" selection-start="5441" selection-end="5441" vertical-scroll-proportion="0.5383707" vertical-offset="1329" max-vertical-offset="3349">
           <folding />
         </state>
       </provider>
