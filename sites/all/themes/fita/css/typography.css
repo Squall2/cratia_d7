@@ -1,0 +1,67 @@
+/* Grays*/
+/* Colors*/
+/* Links*/
+.resetTypografy * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.element-invisible {
+  clip: rect(0, 0, 0, 0);
+  position: absolute !important;
+}
+
+.clear {
+  clear: both;
+  float: none;
+}
+
+body {
+  color: #222222;
+  background-color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+a {
+  border: none;
+  color: #1c94c4;
+  text-decoration: none;
+}
+a::before, a, a::after {
+  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-duration: .2s;
+}
+a img {
+  border: none;
+  outline: none;
+}
+a:hover {
+  text-decoration: underline;
+  outline: none;
+  color: #1d7193;
+}
+a.js {
+  text-decoration: none;
+  border-bottom-width: 0.07143em;
+  border-bottom-style: dashed;
+}
+
+.to-left {
+  float: left;
+  margin-right: 0.57143em;
+}
+
+.to-right {
+  float: right;
+  margin-left: 0.57143em;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}

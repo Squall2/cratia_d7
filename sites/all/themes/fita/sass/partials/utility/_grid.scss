@@ -1,0 +1,42 @@
+$grid-columns-default: 12 !default;
+
+@mixin g-row($margin: 0) {
+  @include clearfix;
+  @if $margin != 0 {
+    margin-left: -$margin;
+  }
+}
+
+@mixin g-columns($columns, $grid-columns: $grid-columns-default, $margin: 0) {
+  float: left;
+  width: $columns / $grid-columns * 100%;
+  @if $margin != 0 {
+    @include bx-sz();
+    border-left: $margin solid transparent;
+  }
+}
+
+@mixin g-push($columns, $grid-columns: $grid-columns-default) {
+  position: relative;
+  left: $columns / $grid-columns * 100%;
+}
+
+@mixin g-pull($columns, $grid-columns: $grid-columns-default) {
+  position: relative;
+  right: $columns / $grid-columns * 100%;
+}
+
+@mixin g-make($grid-columns: $grid-columns-default, $prefix: '', $margin: 0) {
+  .g#{$prefix}-row {
+    @include g-row($margin);
+  }
+  @for $columns from 1 through ($grid-columns - 1) {
+    .g#{$prefix}-columns-#{$columns} {
+      @include g-columns($columns, $grid-columns, $margin);
+    }
+  }
+  .g#{$prefix}-column-first, .g#{$prefix}-columns-#{$grid-columns} {
+    clear: left;
+  }
+}
+

@@ -1,0 +1,83 @@
+.clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+    width: 100%;
+    height: 0;
+  }
+}
+
+.i-b {
+  display: inline-block;
+  margin-left: -.36em;
+  vertical-align: top;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.v-gradient(@first,@second) {
+  background: @first; /* Old browsers */
+  background: -moz-linear-gradient(top,  @first 0%, @second 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@first), color-stop(100%,@second)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  @first 0%,@second 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  @first 0%,@second 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  @first 0%,@second 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  @first 0%,@second 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@first, endColorstr=@second,GradientType=0 ); /* IE6-9 */
+}
+
+.all-wdth-bg(@bg) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -999em;
+    right: -999em;
+    top: 0;
+    height: 100%;
+    background: @bg;
+    z-index: -1;
+    display: block;
+  }
+}
+
+.placeholder(@color) {
+  ::-webkit-input-placeholder {color:@color;opacity: 1!important;}
+  ::-moz-placeholder          {color:@color;opacity: 1!important;}/* Firefox 19+ */
+  :-moz-placeholder           {color:@color;opacity: 1!important;}/* Firefox 18- */
+  :-ms-input-placeholder      {color:@color;opacity: 1!important;}
+}
+
+.resetList {
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    list-style: none;
+  }
+}
+.t-d(@time){
+  -webkit-transition-duration: @time;
+  -moz-transition-duration: @time;
+  -ms-transition-duration: @time;
+  -o-transition-duration: @time;
+  transition-duration: @time;
+}
+
+.stitches(@x: 0, @y: 0, @width: 0, @height: 0) {
+  background-position: @x @y;
+  width: @width;
+  height: @height;
+}
+.placeholder-focus{
+  input::-webkit-input-placeholder,textarea::-webkit-input-placeholder                    {opacity: 1!important; transition: opacity 0.3s ease;}
+  input::-moz-placeholder ,textarea::-moz-placeholder                                     {opacity: 1!important; transition: opacity 0.3s ease;}
+  input:-moz-placeholder  ,textarea:-moz-placeholder                                      {opacity: 1!important; transition: opacity 0.3s ease;}
+  input:-ms-input-placeholder  ,textarea:-ms-input-placeholder                            {opacity: 1!important; transition: opacity 0.3s ease;}
+  input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder        {opacity: 0!important; transition: opacity 0.3s ease;}
+  input::-moz-placeholder   ,textarea:focus::-moz-placeholder                             {opacity: 0!important; transition: opacity 0.3s ease;}
+  input:-moz-placeholder ,textarea:focus:-moz-placeholder                                 {opacity: 0!important; transition: opacity 0.3s ease;}
+  input:focus:-ms-input-placeholder ,textarea:focus:-ms-input-placeholder                 {opacity: 0!important; transition: opacity 0.3s ease;}
+}

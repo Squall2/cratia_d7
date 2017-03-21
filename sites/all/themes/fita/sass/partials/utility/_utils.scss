@@ -1,0 +1,157 @@
+@mixin l-g-h($startColor: $ui-main, $endColor: $ui-second){
+//  background-color: average($startColor, $endColor);
+//  .l-g("90deg, ${startColor} 0%, ${endColor} 100%");
+  background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+  background: linear-gradient(90deg, $startColor 0%, $startColor 100);
+//  $ieStartColor: argb($startColor); $ieEndColor: argb($endColor);
+//  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='${ieStartColor}', EndColorStr='${ieEndColor}', GradientType=1))";
+}
+
+
+@mixin l-g-v($startColor: $ui-main, $endColor: $ui-second){
+//  background-color: average($startColor, $endColor);
+//  .l-g("180deg, ${startColor} 0%, ${endColor} 100%");
+  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background: linear-gradient(180deg, $startColor 0%, $endColor 100%);
+//  $ieStartColor: argb($startColor); $ieEndColor: argb($endColor);
+//  filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='${ieStartColor}', EndColorStr='${ieEndColor}', GradientType=0))";
+}
+
+@mixin bx-sz($s: border-box) {
+  -webkit-box-sizing: $s;
+     -moz-box-sizing: $s;
+          box-sizing: $s;
+}
+
+//helper mixin
+@mixin resetList {
+  li {
+    list-style: none;
+  }
+  li, ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+%resetList { @include resetList }
+
+@mixin resetTable {
+  table, tbody, thead, tbody, tr, td, th {
+    border: none;
+    background: none;
+  }
+}
+
+%resetTable { @include resetTable }
+
+@mixin resetTypografy {
+  * { margin-top: 0; margin-bottom: 0; }
+}
+
+%resetTypografy { @include resetTypografy }
+
+// For image replacement
+@mixin ir {
+  color: transparent !important;
+  text-indent: 100%;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+}
+
+%ir { @include ir }
+
+@mixin linkUnderlineInvert {
+  a       { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+}
+
+%linkUnderlineInvert { @include linkUnderlineInvert }
+
+@mixin list2table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  &>li { display: table-cell; padding: 0; }
+}
+
+%list2table { @include list2table }
+
+%_ext-background{
+  z-index: 0;
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100% !important;
+    left: -999em;
+    right: -999em;
+    visibility: visible !important;
+  }
+}
+
+@mixin ext-background($background: 0, $position: relative) {
+  @extend %_ext-background;
+  position: $position;
+  &:before {
+    @if $background {
+      background: $background;
+    }
+  }
+}
+//.background-url(@url: "images/#") {
+//  @urle: escape(@url);
+//  background-image: url(@urle);
+//}
+
+//.rgba(@c: fade(@ui-main, 50%)) {
+////  .rgba-image(@c);
+//  background: @c;
+//}
+
+//.rgba-image(@c: fade(@ui-main, 50%)) {
+//  .background-url("images/rgba.php/@{c}");
+//}
+
+@mixin to-left($space: $ex) {
+  float: left;
+  margin-right: $space;
+}
+
+@mixin to-right($space: $ex) {
+  float: right;
+  margin-left: $space;
+}
+
+//  Drupal helper clone mixin
+
+
+@mixin element-invisible {
+  clip: rect(0, 0, 0, 0);
+  position: absolute !important;
+}
+
+%element-invisible { @include element-invisible; }
+
+@mixin clearfix {
+  &:after, &:before {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%clearfix { @include clearfix; }
+
+@mixin clear {
+  clear: both;
+  float: none;
+}
+
+%clear { @include clear; }

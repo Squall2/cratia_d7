@@ -1,0 +1,20 @@
+$rem:                           14px !default;
+
+@function em($target, $context: $rem) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@function rem($target, $context: $rem) {
+  @return em(round($target*$context), $context);
+}
+
+$ex:                            rem(.6)  !default;
+$thin:                          rem(.1)  !default;
+$thick:                         rem(.2)  !default;
+$lh:                            1.5      !default;
+$lh-btn:                        1.15     !default; // magic number
+
+$space:                         rem($lh) !default;
+
+$br:                            rem(1/3) !default;
